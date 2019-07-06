@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TiketSayaApp</string>
+    <string name="slogan">Wisata jadi lebih asyik</string>
+    <string name="text1">Discover \nThe Beauty\nOf Earth </string>
+    <string name="signin">SIGN IN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email Address</string>
+    <string name="continue_lbl">continue</string>
+    <string name="nama_lbl">Nama</string>
+    <string name="bio_lbl">Bio</string>
+    <string name="title_activity_success_register">SuccessRegisterAct</string>
+    <string name="buy_ticket">Buy Ticket</string>
+    <string name="menara_pisa">Menara Pisa</string>
+    <string name="pisa_location">Pisa City, Italy</string>
+
+
+</resources>

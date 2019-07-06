@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".RegisterOneAct">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/bg_gradient_primary_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:lineSpacingExtra="9dp"
+        android:text="Create New Account"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_light"
+        android:lineSpacingExtra="9dp"
+        android:text="Please fill up the forms below\n
+for informations"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <!--View untuk background putih card-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_layout_white"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <!--VIew Untuk Username-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Username"
+                android:textColor="@color/grayPrimary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_edit"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/blackPrimary" />
+
+        </LinearLayout>
+        <!--end view username-->
+
+        <!--VIew Untuk Password-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="@string/password"
+                android:textColor="@color/grayPrimary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_edit"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/blackPrimary" />
+
+        </LinearLayout>
+        <!--end view password-->
+
+        <!--Text View Untuk email-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="@string/email"
+                android:textColor="@color/grayPrimary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_edit"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/blackPrimary" />
+
+        </LinearLayout>
+        <!--end view email-->
+
+    </LinearLayout>
+    <!--end background card putih-->
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_btn_blue_primary"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/continue_lbl"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <!--Membuat tombol back-->
+    <LinearLayout
+        android:id="@+id/btn_back"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_layout_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btn_continue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_back" />
+
+    </LinearLayout>
+    <!--end layout tombol back-->
+
+
+</android.support.constraint.ConstraintLayout>

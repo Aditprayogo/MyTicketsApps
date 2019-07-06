@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid
+        android:color="#f1f2f5"
+        />
+
+    <!--Untuk mengatur radius dll menggunakan corners-->
+    <corners
+        android:radius="8dp"
+        />
+
+</shape>

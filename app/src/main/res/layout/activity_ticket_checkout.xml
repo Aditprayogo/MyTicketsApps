@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".TicketCheckoutAct">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_gradient_primary_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:lineSpacingExtra="9dp"
+        android:text="Buy Ticket"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <!--Untuk card putih-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_layout_white"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="30dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Ticket Details"
+            android:textColor="@color/blackPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Check the amount of tickets"
+            android:textColor="@color/grayPrimary"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EDEDED" />
+
+        <!--Untuk Photo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_ticket_buy" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nama_wisata"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_minus"
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btnmines" />
+
+                <TextView
+                    android:id="@+id/textjumlahtiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginRight="12sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="1"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/btn_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/btnpls" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/ketentuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:lineSpacingExtra="9dp"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
+    <!--end background card putih-->
+
+    <!--Untuk card putih-->
+    <LinearLayout
+        android:id="@+id/linear_layout_harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_layout_white"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="16dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Pricing"
+            android:textColor="@color/blackPrimary"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Your Current balance is "
+                android:textColor="@color/grayPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textmybalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_light"
+                android:text="US$ 0"
+                android:textColor="@color/bluePrimary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EDEDED" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Total Price "
+                android:textColor="@color/grayPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/texttotalharga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="US$ 0"
+                android:textColor="@color/price"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--end background card putih-->
+
+    <Button
+
+        android:id="@+id/btn_pay_now"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_green_primary"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="pay now"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_harga" />
+
+    <!--Membuat tombol back-->
+    <LinearLayout
+        android:id="@+id/btn_back"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_layout_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btn_buy_ticket"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_harga">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_back" />
+
+    </LinearLayout>
+    <!--end layout tombol back-->
+
+    <ImageView
+        android:id="@+id/notice_uang"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/icon_tidak_cukup_uang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</android.support.constraint.ConstraintLayout>
