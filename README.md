@@ -1,4 +1,4 @@
 
 # MyTicketsApps
 
-Ticket Booking Application using Java , XML and Firebase 
+Ticket Booking Mobile Application using Java Android , XML , Firebase  
