@@ -106,7 +106,6 @@ public class SigninAct extends AppCompatActivity {
                                        //pindah activity
                                        Intent gotohome = new Intent(SigninAct.this, HomeAct.class);
                                        startActivity(gotohome);
-                                       finish();
 
                                    }else{
                                        //jika password salah

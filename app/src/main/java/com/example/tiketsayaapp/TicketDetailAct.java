@@ -72,7 +72,8 @@ public class TicketDetailAct extends AppCompatActivity {
 
                 short_desc_ticket.setText(dataSnapshot.child("short_desc").getValue().toString());
 
-                Picasso.with(TicketDetailAct.this).load(dataSnapshot.child("url_thumbnail").getValue().toString()).centerCrop().fit().into(header_ticket_detail);
+                Picasso.with(TicketDetailAct.this).load(dataSnapshot.child("url_thumbnail")
+                        .getValue().toString()).centerCrop().fit().into(header_ticket_detail);
 
             }
 

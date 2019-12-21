@@ -60,6 +60,7 @@ public class HomeAct extends AppCompatActivity {
                 nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 user_balance.setText("US$ " + dataSnapshot.child("user_balance").getValue().toString());
                 bio.setText(dataSnapshot.child("bio").getValue().toString());
+
                 Picasso.with(HomeAct.this).load(dataSnapshot.child("url_photo_profile").getValue().toString()).centerCrop().fit().into(photo_home_user);
             }
 
