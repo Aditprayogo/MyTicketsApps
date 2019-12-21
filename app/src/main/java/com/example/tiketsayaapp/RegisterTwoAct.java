@@ -120,6 +120,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                             //berpindah ke activity lain
                             Intent gotosuccesregister = new Intent(RegisterTwoAct.this, SuccessRegisterAct.class);
                             startActivity(gotosuccesregister);
+                            finish();
 
                         }
                     });

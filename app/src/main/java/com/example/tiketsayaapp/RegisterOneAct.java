@@ -76,6 +76,7 @@ public class RegisterOneAct extends AppCompatActivity {
 
                 Intent gotoregistertwo = new Intent(RegisterOneAct.this, RegisterTwoAct.class);
                 startActivity(gotoregistertwo);
+                finish();
             }
         });
 
