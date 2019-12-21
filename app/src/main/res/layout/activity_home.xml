@@ -8,13 +8,13 @@
     tools:context=".HomeAct">
 
     <ScrollView
-        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
+        android:orientation="vertical"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -61,23 +61,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
-                <com.github.florent37.shapeofview.shapes.CircleView
-                    android:id="@+id/btn_profile"
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/btn_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="72dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shape_circle_borderWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/photo_home_user"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="79dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:shape_circle_borderWidth="2dp">
+                    android:src="@drawable/icon_nopic" />
 
-                    <ImageView
-                        android:id="@+id/photo_home_user"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/icon_nopic" />
-
-                </com.github.florent37.shapeofview.shapes.CircleView>
+            </com.github.florent37.shapeofview.shapes.CircleView>
 
             <TextView
                 android:id="@+id/nama_lengkap"
@@ -101,7 +101,7 @@
                 android:fontFamily="@font/montserrat_light"
 
                 android:textColor="#fff"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/view3"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -367,36 +367,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <HorizontalScrollView
-                android:scrollbars="none"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
+                android:scrollbars="none"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
 
                     <ImageView
+                        android:layout_width="227dp"
+                        android:layout_height="98dp"
+                        android:layout_marginRight="24dp"
                         android:src="@drawable/item_one"
-                        android:layout_marginRight="24dp"
-                        android:layout_width="227dp"
-                        android:layout_height="98dp"
 
 
                         />
 
                     <ImageView
-                        android:layout_marginRight="24dp"
-                        android:src="@drawable/item_two"
                         android:layout_width="227dp"
                         android:layout_height="98dp"
-                        />
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/item_two" />
 
                 </LinearLayout>
 
@@ -405,8 +403,6 @@
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
-
-
 
 
 </android.support.constraint.ConstraintLayout>
