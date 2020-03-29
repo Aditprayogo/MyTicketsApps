@@ -83,6 +83,7 @@ public class EditProfileAct extends AppCompatActivity {
                 xusername.setText(dataSnapshot.child("username").getValue().toString());
                 xemail_address.setText(dataSnapshot.child("email_address").getValue().toString());
                 xpassword.setText(dataSnapshot.child("password").getValue().toString());
+
                 Picasso.with(EditProfileAct.this).load(dataSnapshot.child("url_photo_profile").getValue().toString())
                         .centerCrop().fit().into(photo_edit_profile);
             }
@@ -116,13 +117,14 @@ public class EditProfileAct extends AppCompatActivity {
                 });
 
                 //validasi untuk file (apakah ada)
-                if (photo_location != null){
+                if (photo_location != null) {
 
                     final StorageReference storageReference1 =
-                            storage.child(System.currentTimeMillis()+ "." + getFileExtension(photo_location));
+                            storage.child(System.currentTimeMillis() + "." + getFileExtension(photo_location));
 
                     //ketika berhasil di ambil fotonya , kita letakkan di database
-                    storageReference1.putFile(photo_location).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    storageReference1.putFile(photo_location)
+                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(final UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -136,7 +138,9 @@ public class EditProfileAct extends AppCompatActivity {
                                 }
                             });
 
-                        };
+                        }
+
+                        ;
 
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -153,7 +157,6 @@ public class EditProfileAct extends AppCompatActivity {
 
                 btn_save_profile.setEnabled(false);
                 btn_save_profile.setText("Loading...");
-
 
 
             }
@@ -177,20 +180,20 @@ public class EditProfileAct extends AppCompatActivity {
         });
     }
 
-    public void getUsernameLocal(){
+    public void getUsernameLocal() {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
 
     //get file local
-    String getFileExtension(Uri uri){
+    String getFileExtension(Uri uri) {
         ContentResolver contentResolver = getContentResolver();
         //tipe file
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 
-    public void findPhoto(){
+    public void findPhoto() {
         Intent pic = new Intent();
         pic.setType("image/*");
         pic.setAction(Intent.ACTION_GET_CONTENT);
@@ -201,7 +204,7 @@ public class EditProfileAct extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == photo_max && resultCode == RESULT_OK && data != null && data.getData() != null){
+        if (requestCode == photo_max && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             photo_location = data.getData();
             Picasso.with(this).load(photo_location).centerCrop().fit().into(photo_edit_profile);

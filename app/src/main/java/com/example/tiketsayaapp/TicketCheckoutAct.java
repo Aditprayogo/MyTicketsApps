@@ -254,6 +254,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
                 reference4 = FirebaseDatabase.getInstance().getReference()
                         .child("Users")
                         .child(username_key_new);
+
                 reference4.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
